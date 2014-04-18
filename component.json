@@ -1,0 +1,17 @@
+{
+  "name": "controller",
+  "repo": "browlist/controller",
+  "description": "front-end controller",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "shallker-wang/eventy": "*",
+    "component/jquery": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

@@ -37,7 +37,18 @@ module.exports = function (Controller) {
   Controller.prototype.descendants = function () {}
 
   Controller.prototype.selectDescendants = function (selector) {
-    return j(this.el).find(selector) || null;
+    var descendants = [];
+    var jDescendants = j(this.el).find(selector);
+
+    if (jDescendants.length === 0) {
+      return null;
+    }
+
+    jDescendants.each(function (index, element) {
+      descendants.push(element);
+    });
+
+    return descendants;
   }
 
   Controller.prototype.selectFirstDescendant = function (selector) {
